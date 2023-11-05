@@ -44,7 +44,7 @@
  * */
 /proc/reject_bad_text(text, max_length = 512, ascii_only = TRUE)
 	if(ascii_only)
-		if(length(text) > max_length)
+		if(length_char(text) > max_length)
 			return null
 		var/static/regex/non_ascii = regex(@"[^\x20-\x7E\u0410-\u044F\u0401\u0451\t\n]")
 		if(non_ascii.Find(text))
